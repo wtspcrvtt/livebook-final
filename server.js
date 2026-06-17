@@ -110,6 +110,9 @@ app.post('/api/speech', async (req, res) => {
   }
 });
 
+app.get('/', (req, res) => {
+  res.send('Сервер работает. Используйте POST /api/beautify');
+});
 
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
