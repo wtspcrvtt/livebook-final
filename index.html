@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Живой дневник</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <div id="newEntryView" class="view active">
+            <h1>Живой дневник</h1>
+            <textarea id="entryInput" rows="6" placeholder="Напишите, что сегодня произошло (Минимум 10 символов)"></textarea>
+            <div class="action-buttons">
+                <button id="saveBtn" disabled>Сохранить и превратить в книгу</button>
+                <button id="myBookBtn">Моя книга</button>
+            </div>
+            <div class="mic-placeholder">
+                <span class="mic-icon">🎙️</span>
+                <span class="mic-tooltip">Скоро научимся записывать голос</span>
+            </div>
+        </div>    
+
+        <div id="listView" class="view">
+            <h2>Мой дневник</h2>
+            <button id="backToNewFromList">Назад</button>
+            <div id="entriesList">Загрузочка..</div>
+        </div>
+        
+        <div id="entryView" class="view">
+            <h2>Запись</h2>
+            <button id="backToListFromEntry">К списку</button>
+            <div id="entryContent"></div>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
