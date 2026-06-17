@@ -172,15 +172,15 @@ function typeWriter(element, text, speed = 30) {
   type();
 }
 
-function speakText(text) {
-  async function speakText(text) {
+
+async function speakText(text) {
   if (!text || text.length < 5) {
     alert('Текст слишком короткий для озвучивания');
     return;
   }
 
   try {
-    const response = await fetch('https://livebook-app.onrender.com/api/speech', {
+    const response = await fetch('https://livebook-final.onrender.com/api/speech', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -209,11 +209,11 @@ function speakText(text) {
     console.error('Speech error:', error);
     alert('Не удалось озвучить текст. Попробуй ещё раз.');
   }
-  }
 }
 
+
 async function beautifyText(text) {
-  const response = await fetch('https://livebook-app.onrender.com/api/beautify', {
+  const response = await fetch('https://livebook-final.onrender.com/api/beautify', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
